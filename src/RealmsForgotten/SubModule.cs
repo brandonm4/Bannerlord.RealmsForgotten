@@ -21,9 +21,9 @@ using RealmsForgotten.Managers;
 
 public partial class SubModule : MBSubModuleBaseEx
 {
-    public readonly static string ModuleId = "BaseModuleTemplate";
-    public readonly static string DisplayName = "Base Module Template";
-    public readonly static string HarmonyDomain = "com.darkspyre.bmt";
+    public readonly static string ModuleId = "RealmsForgotten";
+    public readonly static string DisplayName = "Realms Forgotten";
+    public readonly static string HarmonyDomain = "com.realmsforgotten.coreoh -";
     internal readonly static Color StdTextColor = Color.FromUint(15822118);
     internal static SubModule Instance { get; set; } = default!;
     internal static ILogger Log { get; set; } = default!;
