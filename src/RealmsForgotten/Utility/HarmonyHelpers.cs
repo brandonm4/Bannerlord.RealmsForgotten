@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 
 using System.Linq;
 
-namespace Utility;
+namespace RealmsForgotten.Utility;
 
     [PublicAPI]
     internal static class HarmonyHelpers

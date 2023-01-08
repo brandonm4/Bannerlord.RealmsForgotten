@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using TaleWorlds.CampaignSystem.GameComponents;
 using TaleWorlds.Core;
 
-using Utility;
+using RealmsForgotten.Utility;
 
 namespace RealmsForgotten.Patches.MainMapPatches
 {

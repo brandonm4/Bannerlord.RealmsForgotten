@@ -17,9 +17,8 @@ using System.Reflection;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
-using zCulturedStart;
 
-namespace RealmsForgotten
+namespace RealmsForgotten.Patch.CulturedStart
 {
   public class RFPatches
   {

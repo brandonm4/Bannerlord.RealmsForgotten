@@ -2,7 +2,7 @@
 //#define VERSION120
 
 using TaleWorlds.Core;
-namespace Utility;
+namespace RealmsForgotten.Utility;
 
 public interface IPatch
 {

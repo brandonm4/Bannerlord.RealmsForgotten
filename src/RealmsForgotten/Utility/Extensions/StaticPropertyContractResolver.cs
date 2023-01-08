@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace BMBannerlord.Common.Extensions
+namespace RealmsForgotten.Utility.Extensions
 {
     public class StaticPropertyContractResolver : DefaultContractResolver
     {

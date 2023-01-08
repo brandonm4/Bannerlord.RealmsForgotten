@@ -9,7 +9,7 @@ using TaleWorlds.Library;
 using TaleWorlds.Localization;
 
 
-namespace Utility
+namespace RealmsForgotten.Utility
 {
     public static class MessageHelper
     {        

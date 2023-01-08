@@ -11,8 +11,9 @@ using System.Reflection;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 
-using Utility;
+using RealmsForgotten.Utility;
 
+namespace RealmsForgotten;
 public partial class SubModule
 {
 

@@ -1,5 +1,5 @@
 using TaleWorlds.Core;
-namespace Utility;
+namespace RealmsForgotten.Utility;
 public abstract class PatchBase<TPatch> : IPatch where TPatch : IPatch
 {
     //  public static TPatch ActivePatch

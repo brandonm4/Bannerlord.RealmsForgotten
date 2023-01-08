@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Extensions;
+namespace RealmsForgotten.Utility.Extensions;
 
 public static class ExceptionExtensionMethods
 {

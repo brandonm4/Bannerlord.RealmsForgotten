@@ -11,7 +11,7 @@ using TaleWorlds.Library;
 using System;
 
 
-namespace zCulturedStart
+namespace RealmsForgotten.Managers
 {
     public static class CulturedStartAction
     {

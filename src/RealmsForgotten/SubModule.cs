@@ -1,5 +1,5 @@
 ﻿using Bannerlord.ButterLib.MBSubModuleBaseExtended;
-using Utility;
+using RealmsForgotten.Utility;
 using HarmonyLib;
 
 using System;
@@ -18,12 +18,15 @@ using Serilog.Events;
 using Bannerlord.ButterLib.Common.Extensions;
 using TaleWorlds.Localization;
 using RealmsForgotten.Managers;
+using Bannerlord.UIExtenderEx;
+
+namespace RealmsForgotten;
 
 public partial class SubModule : MBSubModuleBaseEx
 {
     public readonly static string ModuleId = "RealmsForgotten";
     public readonly static string DisplayName = "Realms Forgotten";
-    public readonly static string HarmonyDomain = "com.realmsforgotten.coreoh -";
+    public readonly static string HarmonyDomain = "com.realmsforgotten";
     internal readonly static Color StdTextColor = Color.FromUint(15822118);
     internal static SubModule Instance { get; set; } = default!;
     internal static ILogger Log { get; set; } = default!;
@@ -43,9 +46,9 @@ public partial class SubModule : MBSubModuleBaseEx
         
         Instance = this;
 
-        //var extender = new UIExtender(Name);
-        //extender.Register(typeof(SubModule).Assembly);
-        //extender.Enable();
+        var extender = new UIExtender(ModuleId);
+        extender.Register(typeof(SubModule).Assembly);
+        extender.Enable();
 
         LogEventLevel logEventLevel = LogEventLevel.Information;
         if (Settings.Instance.DebugMode)

@@ -16,9 +16,9 @@ using TaleWorlds.Core;
 
 using TaleWorlds.Localization;
 
-using Utility;
+using RealmsForgotten.Utility;
 
-namespace RealmsForgotten.Patches.CulturedStart
+namespace RealmsForgotten.Patch.CulturedStartart
 {
     [HarmonyPatch(typeof(CharacterCreationGenericStageVM), "RefreshSelectedOptions")]
     public class CSPatchCharacterCreationStageVM

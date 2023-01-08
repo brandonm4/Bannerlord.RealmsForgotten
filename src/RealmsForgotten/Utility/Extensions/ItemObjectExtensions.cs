@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 using TaleWorlds.MountAndBlade;
-namespace Extensions;
+namespace RealmsForgotten.Utility.Extensions;
 
 public static class ItemObjectExtensions
 {

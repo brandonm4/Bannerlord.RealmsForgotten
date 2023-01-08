@@ -6,7 +6,7 @@ using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
 
-namespace zCulturedStart.Patches
+namespace RealmsForgotten.Patch.CulturedStart
 {
     [HarmonyPatch(typeof(CharacterCreationOption), "SetTextVariables")]
     public class CSPatchCharacterCreationOption

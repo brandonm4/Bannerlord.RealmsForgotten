@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+namespace RealmsForgotten;
 internal class Settings
 {
     public static SettingsMCM Instance

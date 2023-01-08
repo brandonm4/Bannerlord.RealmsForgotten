@@ -15,9 +15,9 @@ using TaleWorlds.Core;
 
 using TaleWorlds.Localization;
 
-using Utility;
+using RealmsForgotten.Utility;
 
-namespace RealmsForgotten.Patches.CulturedStart
+namespace RealmsForgotten.Patch.CulturedStart
 {
     internal class CharacterCreationOptionPatch : PatchBase<CharacterCreationOptionPatch>
     {
