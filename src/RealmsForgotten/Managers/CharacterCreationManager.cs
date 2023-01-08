@@ -17,6 +17,7 @@ namespace RealmsForgotten.Managers
         public static CharacterCreationManager _instance = new();
         public static CharacterCreationManager Instance => _instance;
 
+        internal readonly Random random= new Random();
         internal Dictionary<string, Tuple<string, string, string, string>> villagerMin;
         internal Dictionary<string, Tuple<string, string, string, string>> villagerMax;
         internal Dictionary<string, Tuple<string, string, string, string>> fighterMin;

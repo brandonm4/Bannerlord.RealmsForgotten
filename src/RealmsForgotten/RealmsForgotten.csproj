@@ -63,6 +63,7 @@
 
 	<ItemGroup>
 	  <Folder Include="Behaviors\" />
+	  <Folder Include="HotKeys\Campaign\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>	

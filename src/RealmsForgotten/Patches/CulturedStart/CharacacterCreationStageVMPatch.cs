@@ -31,43 +31,43 @@ namespace RealmsForgotten.Patches.CulturedStart
     }
 }
 
-internal class CharacacterCreationStageVMPatch : PatchBase<CharacacterCreationStageVMPatch>
-    {
-        public override bool Applied { get; protected set; }
-        private readonly MethodInfo TargetMethodInfo =
-            typeof(CharacterCreationGenericStageVM).GetMethod(
-                "RefreshSelectedOptions",
-                BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly
-            );
-        private readonly MethodInfo PatchMethodInfo =
-            typeof(MainMapPatch).GetMethod(
-                nameof(Transpiler),
-                BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.DeclaredOnly
-            );
+//internal class CharacacterCreationStageVMPatch : PatchBase<CharacacterCreationStageVMPatch>
+//    {
+//        public override bool Applied { get; protected set; }
+//        private readonly MethodInfo TargetMethodInfo =
+//            typeof(CharacterCreationGenericStageVM).GetMethod(
+//                "RefreshSelectedOptions",
+//                BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly
+//            );
+//        private readonly MethodInfo PatchMethodInfo =
+//            typeof(MainMapPatch).GetMethod(
+//                nameof(Transpiler),
+//                BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.DeclaredOnly
+//            );
 
-        public override bool IsApplicable(Game? game = null)
-        {           
-            return true;
-        }
-        public override bool IsEarlyPatch => true;
+//        public override bool IsApplicable(Game? game = null)
+//        {           
+//            return true;
+//        }
+//        public override bool IsEarlyPatch => true;
 
-        public override void Apply(Game game)
-        {
-            if (Applied)
-            {
-                return;
-            }
+//        public override void Apply(Game game)
+//        {
+//            if (Applied)
+//            {
+//                return;
+//            }
 
-            SubModule.Harmony.Patch(
-                TargetMethodInfo,
-                transpiler: new HarmonyMethod(PatchMethodInfo) { priority = Priority.First, }
-            );
+//            SubModule.Harmony.Patch(
+//                TargetMethodInfo,
+//                transpiler: new HarmonyMethod(PatchMethodInfo) { priority = Priority.First, }
+//            );
 
-            Applied = true;
-        }
+//            Applied = true;
+//        }
 
-        public override void Reset() { }
+//        public override void Reset() { }
 
         
-    }
-}
+//    }
+//}
