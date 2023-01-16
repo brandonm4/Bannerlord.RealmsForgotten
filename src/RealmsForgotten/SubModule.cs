@@ -19,6 +19,7 @@ using Bannerlord.ButterLib.Common.Extensions;
 using TaleWorlds.Localization;
 using RealmsForgotten.Managers;
 using Bannerlord.UIExtenderEx;
+using System.Reflection;
 
 namespace RealmsForgotten;
 
@@ -59,7 +60,7 @@ public partial class SubModule : MBSubModuleBaseEx
         this.AddSerilogLoggerProvider($"{ModuleId}.log", new[] { $"{ModuleId}.*" }, config => config.MinimumLevel.Is(Settings.Instance.DebugLogLevel.SelectedValue));
         Log = LogFactory.Get<SubModule>();
 
-        Module.CurrentModule.AddInitialStateOption(new InitialStateOption("RT", new TextObject("Realms Forgotten", null), 3, () => MBGameManager.StartNewGame(new RFCampaignManager()), () => new ValueTuple<bool, TextObject>(Module.CurrentModule.IsOnlyCoreContentEnabled, new TextObject("Disabled during installation.", null))));
+        TaleWorlds.MountAndBlade.Module.CurrentModule.AddInitialStateOption(new InitialStateOption("RT", new TextObject("Realms Forgotten", null), 3, () => MBGameManager.StartNewGame(new RFCampaignManager()), () => new ValueTuple<bool, TextObject>(TaleWorlds.MountAndBlade.Module.CurrentModule.IsOnlyCoreContentEnabled, new TextObject("Disabled during installation.", null))));
 
         ApplyPatches(
                 null,
@@ -67,6 +68,8 @@ public partial class SubModule : MBSubModuleBaseEx
                 Settings.Instance.DebugMode,
                 true
             );
+
+        Harmony.PatchAll(Assembly.GetExecutingAssembly());
 
         base.OnSubModuleLoad();
     }
